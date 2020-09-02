@@ -9,6 +9,20 @@
 The code was was tested in R version 3.6.1 and requires the following packages:
 `foreach`, `doParallel`, `igraph`, `FastKNN`, `largeVis`, `MASS`
 
+## Getting Started
+
+Clone this repository into some location, '*myLocation*'
+
+```bash
+git clone https://github.com/stanleyn/MOAB
+```
+
+Move into the directory that you cloned the repository into,
+
+```bash
+cd *myLocation*
+```
+
 # Benchmarking Tasks
 
 Here we will show examples for how to run both types of benchmarking tasks introduced in our paper across the three multiomics datasets and six dimensionality reduction methods.
