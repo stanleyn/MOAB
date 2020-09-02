@@ -25,7 +25,7 @@ cd myPath
 
 # Benchmarking Tasks
 
-Here we will show examples for how to run both types of benchmarking tasks introduced in our paper across the three multiomics datasets and six dimensionality reduction methods.
+Here we will show examples for how to run both types of benchmarking tasks introduced in our paper across the three multiomics datasets and six dimensionality reduction methods. For each dataset/DR algorithm combination, we run 30 trials of the label propagation task. 
 
 * Task 1) We will quantify the overlap between the low-dimensional projection and original high dimensional space
 * Task 2) We will report the visual quality score for each dimensionality reduction method
@@ -41,4 +41,13 @@ To run the benchmarking task for the TCGA-sarc dataset,
 source('TCGA_sarc/LP_Test_sarcoma.R')
 ```
 
-You can find the matrix of `Method x Neighborhood Size` in `FullDF` 
+You can find the matrix of `Method x Neighborhood Size` in `FullDF`
+
+### TCGA-Adeno 
+To run the benchmarking task for the TCA-adeno dataset,
+
+```R
+source('TCGA_adeno/LP_Test_adeno.R')
+```
+
+You can find the matrix of `Method x Neighborhood Size` in `FullDF`

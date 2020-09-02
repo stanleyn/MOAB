@@ -122,15 +122,17 @@ library('ggplot2')
 library('reshape2')
 library('plyr')
 
-stop('')
-FullDF=rbind(kMat_tSNE,kMat_UMAP,kMat_LV,kMat_PCA,kMat_TriMap,kMat_Lamp)
-#and for making the line plot with only the averages
-DT3=ddply(FullDF,.(Method,k),summarize,mean(score))
-names(DT3)=c('Method','k','Score')
-p<-ggplot(DT3, aes(x=k, y=Score, group=Method)) +
-  geom_line(aes(color=Method),lwd=1.3)+
-  geom_point(aes(color=Method),size=1.5)+scale_color_manual(values=valVec)
-p=p+theme_minimal()+theme(text = element_text(size=22))+xlab('k (# of nearest neighbors)')+ylab('LP Score')+scale_color_manual(values = valVec)+ggtitle('')
-p=p+theme_classic()+theme(axis.text.y = element_text(size=22),axis.text.x=element_text(size=22))+theme(legend.position='none')
-p=p+theme(axis.title.y = element_text(size=22),axis.title.x=element_text(size=22))
-ggsave('~/sarc_LP.pdf',p,width=5,height=5)
+FullDF=rbind(rowMeans(kMat_tSNE),rowMeans(kMat_UMAP),rowMeans(kMat_LV),rowMeans(kMat_TriMap),rowMeans(kMat_PCA),rowMeans(kMat_Lamp))
+rownames(FullDF)=c('tSNE','UMAP','LargeVis','TriMap','PCA','Lamp')
+
+#valVec=c('gray50','darkviolet','darkolivegreen3','deeppink1','deepskyblue4','darkorange2','darkgoldenrod','black','darkblue')
+#valVec=valVec[-c(5,7,9)]
+#FullDF=melt(FullDF)
+#names(FullDF)=c('Method','k','score')
+#p<-ggplot(DT3, aes(x=k, y=Score, group=Method)) +
+#  geom_line(aes(color=Method),lwd=1.3)+
+#  geom_point(aes(color=Method),size=1.5)+scale_color_manual(values=valVec)
+#p=p+theme_minimal()+theme(text = element_text(size=22))+xlab('k (# of nearest neighbors)')+ylab('LP Score')+scale_color_manual(values = valVec)+ggtitle('')
+#p=p+theme_classic()+theme(axis.text.y = element_text(size=22),axis.text.x=element_text(size=22))+theme(legend.position='none')
+#p=p+theme(axis.title.y = element_text(size=22),axis.title.x=element_text(size=22))
+#ggsave('~/sarc_LP.pdf',p,width=5,height=5)
