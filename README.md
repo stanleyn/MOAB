@@ -20,4 +20,11 @@ Here we will show examples for how to run both types of benchmarking tasks intro
 
 Here we show task 1 for each of the three datasets
 
-### TCGA-Sarc 
+### TCGA-Sarc
+To run the benchmarking task for the TCGA-sarc dataset,
+
+```R
+source('TCGA_sarc/LP_Test_sarcoma.R')
+```
+
+You can find the matrix of `Method x Neighborhood Size` in `FullDF` 
