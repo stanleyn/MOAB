@@ -11,7 +11,7 @@ The code was was tested in R version 3.6.1 and requires the following packages:
 
 ## Getting Started
 
-Clone this repository into some location, '*myLocation*'
+Clone this repository into some location, `myPath`
 
 ```bash
 git clone https://github.com/stanleyn/MOAB
@@ -20,7 +20,7 @@ git clone https://github.com/stanleyn/MOAB
 Move into the directory that you cloned the repository into,
 
 ```bash
-cd *myLocation*
+cd myPath
 ```
 
 # Benchmarking Tasks
