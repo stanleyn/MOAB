@@ -137,5 +137,5 @@ rownames(FullDF)=c('tSNE','UMAP','LargeVis','TriMap','PCA','Lamp')
 #p=p+theme_minimal()+theme(text = element_text(size=22))+xlab('k (# of nearest neighbors)')+ylab('LP Score')+scale_color_manual(values = valVec)+ggtitle('')
 #p=p+theme_classic()+theme(axis.text.y = element_text(size=22),axis.text.x=element_text(size=22))+theme(legend.position='none')
 #p=p+theme(axis.title.y = element_text(size=22),axis.title.x=element_text(size=22))
-#ggsave('~/sarc_LP.pdf',p,width=5,height=5)
+#ggsave('~/adeno_LP.pdf',p,width=5,height=5)
 

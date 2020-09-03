@@ -44,10 +44,20 @@ source('TCGA_sarc/LP_Test_sarcoma.R')
 You can find the matrix of `Method x Neighborhood Size` in `FullDF`
 
 ### TCGA-Adeno 
-To run the benchmarking task for the TCA-adeno dataset,
+To run the benchmarking task for the TCGA-adeno dataset,
 
 ```R
 source('TCGA_adeno/LP_Test_adeno.R')
 ```
 
 You can find the matrix of `Method x Neighborhood Size` in `FullDF`
+
+### Term Pregnancy
+To run the benchmarking task for the Term-Pregnancy dataset,
+
+```R
+source('Term_Pregnancy/LP_Test_TermPreg.R')
+```
+
+You can find the matrix of `Method x Neighborhood Size` in `FullDF`
+
