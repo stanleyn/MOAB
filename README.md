@@ -7,7 +7,7 @@
 ## Dependencies 
 
 The code was was tested in R version 3.6.1 and requires the following packages:
-`foreach`, `doParallel`, `igraph`, `FastKNN`, `largeVis`, `MASS`
+`foreach`, `doParallel`, `igraph`, `FastKNN`, `largeVis`, `MASS`, `rPython`. You will also need to have python installed.
 
 ## Getting Started
 
@@ -60,4 +60,11 @@ source('Term_Pregnancy/LP_Test_TermPreg.R')
 ```
 
 You can find the matrix of `Method x Neighborhood Size` in `FullDF`
+
+## Task 2: Computing a Visual Quality Score
+
+Here we will demonstrate how to compute visual quality scores for each of the 3 datasets across the six dimensionality reduction methods. 
+
+Note that this method requires creating a kNN graph of each layout. These have been pre-computed for each returned dimensionality reduction result using the `largeVis` package in R/python https://github.com/lferry007/LargeVis
+
 

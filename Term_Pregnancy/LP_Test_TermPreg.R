@@ -82,7 +82,7 @@ rownames(kMat_TriMap)=kVals
 
 ###################
 #Lamp
-tEmbed=readRDS('TermPregnancy/Embeddings/Lamp')
+tEmbed=readRDS('Term_Pregnancy/Embeddings/Lamp')
 kVals=c(10,25,50,75,100,200,300)
 
 kMat_Lamp=matrix(0,nrow=length(kVals),ncol=30)
@@ -99,7 +99,7 @@ rownames(kMat_Lamp)=kVals
 ##########
 ##PCA
 
-tEmbed=readRDS('~TermPregnancy/Embeddings/PCA_NoDup')
+tEmbed=readRDS('Term_Pregnancy/Embeddings/PCA_NoDup')
 kVals=c(10,25,50,75,100,200,300)
 
 kMat_PrComp=matrix(0,nrow=length(kVals),ncol=30)
@@ -117,7 +117,7 @@ library('ggplot2')
 library('reshape2')
 library('plyr')
 
-FullDF=rbind(rowMeans(kMat_tSNE),rowMeans(kMat_UMAP),rowMeans(kMat_LV),rowMeans(kMat_TriMap),rowMeans(kMat_PCA),rowMeans(kMat_Lamp))
+FullDF=rbind(rowMeans(kMat_tSNE),rowMeans(kMat_UMAP),rowMeans(kMat_LV),rowMeans(kMat_TriMap),rowMeans(kMat_PrComp),rowMeans(kMat_Lamp))
 rownames(FullDF)=c('tSNE','UMAP','LargeVis','TriMap','PCA','Lamp')
 
 #optional plotting
