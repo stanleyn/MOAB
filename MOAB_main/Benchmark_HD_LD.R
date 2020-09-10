@@ -41,12 +41,10 @@ for(i in 1:length(ULab)){
 	GetFeats=c(GetFeats,sampSome)
 
 }
-print('here')
 print(max(GetFeats))
 print(min(GetFeats))
 print(dim(Embedding))
 print(dim(rawFeat))
-#GetFeats=sample(1:nrow(Embedding),1000,replace=FALSE)
 
 #get the subembedding
 SubEmbed=Embedding[GetFeats,]
@@ -65,15 +63,15 @@ print('setting up data for LP')
 Dat=SubEmbed
 
 k=kk
-   dist_mat <- as.matrix(dist(Dat, method = "euclidean", upper = TRUE, diag=TRUE))
-  nrst <- lapply(1:nrow(dist_mat), function(i) k.nearest.neighbors(i, dist_mat, k = k))
-   w <- matrix(nrow = dim(dist_mat), ncol=dim(dist_mat)) ## all NA right now
-   w[is.na(w)] <- 0 ## populate with 0
-   for(i in 1:length(nrst)) for(j in nrst[[i]]) w[i,j] = 1
+dist_mat <- as.matrix(dist(Dat, method = "euclidean", upper = TRUE, diag=TRUE))
+nrst <- lapply(1:nrow(dist_mat), function(i) k.nearest.neighbors(i, dist_mat, k = k))
+w <- matrix(nrow = dim(dist_mat), ncol=dim(dist_mat)) ## all NA right now
+w[is.na(w)] <- 0 ## populate with 0
+for(i in 1:length(nrst)) for(j in nrst[[i]]) w[i,j] = 1
 
-#  #create the network object
-  Adj2=w
-  Net=graph.adjacency(Adj2,mode='undirected')
+#create the network object
+Adj2=w
+Net=graph.adjacency(Adj2,mode='undirected')
 
 #visualize the network
 colVec=c('#FFD600', '#3F51B5','#F57C00')

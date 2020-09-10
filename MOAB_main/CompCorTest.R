@@ -19,10 +19,11 @@ CompCorTest=function(FullMat,LayGraph){
 cl=makeCluster(5)
 registerDoParallel(cl)
 
-#this has the option to repeat many times if you want
-OutCor=foreach(s=1:1,.combine='cbind',.packages=c('igraph')) %do% {
-print(s)
-source('~/Louvain_Homebrew_Improved.R')
+S=1 #change if you want to do more iterations and take an average
+
+OutCor=foreach(s=1:S,.combine='cbind',.packages=c('igraph')) %do% {
+
+source('Helper/Louvain_Homebrew_Improved.R')
 
 findComm=Louvain_Homebrew_Improved(LayGraph,1,1)
 

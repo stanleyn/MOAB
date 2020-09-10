@@ -38,7 +38,7 @@ Here we show task 1 for each of the three datasets
 To run the benchmarking task for the TCGA-sarc dataset,
 
 ```R
-source('TCGA_sarc/LP_Test_sarcoma.R')
+> source('TCGA_sarc/LP_Test_sarcoma.R')
 ```
 
 You can find the matrix of `Method x Neighborhood Size` in `FullDF`
@@ -47,7 +47,7 @@ You can find the matrix of `Method x Neighborhood Size` in `FullDF`
 To run the benchmarking task for the TCGA-adeno dataset,
 
 ```R
-source('TCGA_adeno/LP_Test_adeno.R')
+> source('TCGA_adeno/LP_Test_adeno.R')
 ```
 
 You can find the matrix of `Method x Neighborhood Size` in `FullDF`
@@ -56,7 +56,7 @@ You can find the matrix of `Method x Neighborhood Size` in `FullDF`
 To run the benchmarking task for the Term-Pregnancy dataset,
 
 ```R
-source('Term_Pregnancy/LP_Test_TermPreg.R')
+> source('Term_Pregnancy/LP_Test_TermPreg.R')
 ```
 
 You can find the matrix of `Method x Neighborhood Size` in `FullDF`
@@ -67,4 +67,33 @@ Here we will demonstrate how to compute visual quality scores for each of the 3 
 
 Note that this method requires creating a kNN graph of each layout. These have been pre-computed for each returned dimensionality reduction result using the `largeVis` package in R/python https://github.com/lferry007/LargeVis
 
+### TCGA-Sarc
+
+To run the visual quality scoring benchmarking task on the TCGA-sarc dataset,
+
+```R
+> source('TCGA_sarc/VizQuality_sarcoma.R')
+```
+
+A vector of quality scores for each algorithm is created in `Quality_Scores`
+
+### TCGA-Adeno
+
+To run the visual quality scoring benchmarking task on the TCGA-Adeno dataset,
+
+```R
+> source('TCGA_adeno/VizQuality_adeno.R')
+```
+
+A vector of quality scores for each algorithm is created in `Quality_Scores`
+
+### Term Pregnancy
+
+To run the visual quality scoring benchmarking task on the Term Pregnancy dataset,
+
+```R
+> source('Term_Pregnancy/VizQuality_TermPregnancy.R')
+```
+
+A vector of quality scores for each algorithm is created in `Quality_Scores`
 
