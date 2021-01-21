@@ -43,8 +43,8 @@ To run the benchmarking task for the TCGA-sarc dataset,
 
 You can find the matrix of `Method x Neighborhood Size` in `FullDF`
 
-### TCGA-Adeno 
-To run the benchmarking task for the TCGA-adeno dataset,
+### TCGA-Adreno 
+To run the benchmarking task for the TCGA-adreno dataset,
 
 ```R
 > source('TCGA_adeno/LP_Test_adeno.R')
@@ -77,9 +77,9 @@ To run the visual quality scoring benchmarking task on the TCGA-sarc dataset,
 
 A vector of quality scores for each algorithm is created in `Quality_Scores`
 
-### TCGA-Adeno
+### TCGA-Adreno
 
-To run the visual quality scoring benchmarking task on the TCGA-Adeno dataset,
+To run the visual quality scoring benchmarking task on the TCGA-Adreno dataset,
 
 ```R
 > source('TCGA_adeno/VizQuality_adeno.R')
