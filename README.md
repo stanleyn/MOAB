@@ -30,7 +30,7 @@ Here we will show examples for how to run both types of benchmarking tasks intro
 * Task 1) We will quantify the overlap between the low-dimensional projection and original high dimensional space
 * Task 2) We will report the visual quality score for each dimensionality reduction method
 
-## Task 1: Alignment between high-dimensional space and low-dimensional projection
+## Task 1: Alignment between high-dimensional space and low-dimensional projection with label propagation task
 
 Here we show task 1 for each of the three datasets
 
@@ -61,7 +61,7 @@ To run the benchmarking task for the Term-Pregnancy dataset,
 
 You can find the matrix of `Method x Neighborhood Size` in `FullDF`
 
-## Task 2: Computing a Visual Quality Score
+## Task 2: Computing a Local Neighborhood Quality Score
 
 Here we will demonstrate how to compute visual quality scores for each of the 3 datasets across the six dimensionality reduction methods. 
 
